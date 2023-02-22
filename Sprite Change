@@ -1,0 +1,53 @@
+function setup() {
+  createCanvas(500, 500);
+  angleMode("degree")
+}
+
+function draw() {
+  background(220);
+  addFace(5, 5, 1)
+}
+
+function addFace(x, y, size){
+  
+  push();
+  translate(x, y);
+  scale(size);
+  
+  if (mouseIsPressed){
+    labRat()
+    scale(0)
+  } else
+  
+  
+  push();
+  translate(-5,-5)
+  scale(0.5)
+  //head
+  fill("tan")
+  ellipse(200,200,380)
+  //eyes
+  fill("whitesmoke")
+  ellipse(130,150,95,140)
+  ellipse(270,150,95,140)
+  //pupils
+  fill("black")
+  ellipse(130,160,55,100)
+  ellipse(270,160,55,100)
+  //mouth
+  fill("black")
+  rect(150,260,150,30)
+  pop()
+  
+  pop(); 
+}
+
+function labRat(){
+  
+  fill("lightgrey")
+  triangle(20,100,60,100,40,50) //body
+  fill("pink")
+  ellipse(26,50,25) //L ear
+  ellipse(54,50,25) //R ear
+}
+
