@@ -1,0 +1,24 @@
+function setup() {
+  createCanvas(400, 400);
+}
+
+function draw() {
+  background(220);
+  myCircle(150,200,100,myColor="rgb(220,208,255)")
+  myTriangle(20,30,100,30,60,200,myColor="rgb(255,209,220)")
+  myQuad(150,20,220,20,250,150,250,200,myColor="rgb(195, 235,270)")
+}
+
+function myCircle(x,y,circleSize,myColor){
+  fill(myColor)
+  ellipse(x,y,circleSize)
+}
+
+function myTriangle(x1,y1,x2,y2,x3,y3,myColor){
+  fill(myColor)
+  triangle(x1,y1,x2,y2,x3,y3)
+}
+
+function myQuad(x1,y1,x2,y2,x3,y3,x4,y4,myColor){
+  fill(myColor)
+  quad(x1,y1,x2,y2,x3,y3,x4,y4);}
